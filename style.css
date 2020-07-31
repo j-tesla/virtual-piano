@@ -1,0 +1,26 @@
+body {
+    background-color: chocolate ;
+}
+kbd {
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    border: 7px solid #2b2b2b;
+    height: 40%;
+    width: 110px;
+    font-size: 25px;
+    max-lines: 1;
+    margin: -4px;
+    padding-top: 30%;
+}
+
+.container {
+    width: max-content;
+    height: 40%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
