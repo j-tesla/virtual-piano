@@ -1,9 +1,10 @@
-notes = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
+let notes = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
 
 document.addEventListener("keydown", function (event){
-    for (let i = 0; i < 7; i = i + 1){
-        if (event.code === 'Key' + notes[i]){
-            console.log("The '" + notes[i] + "' key is pressed.");
+    notes.forEach(function (item) {
+        if (event.code === 'Key' + item){
+            let note = new Audio('snd/' + item + '.mp3')
+            note.play()
         }
-    }
+    });
 });
