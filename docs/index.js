@@ -27,7 +27,7 @@ document.addEventListener("keyup", function (event) {
 
 
 tiles.forEach(function (tile, index) {
-    tile.addEventListener("click", function (event) {
+    tile.addEventListener("click", function () {
         play_note(tile.innerText, tiles[index], false);
         tile.style.backgroundColor = "white"
     });
