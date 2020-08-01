@@ -6,7 +6,7 @@ function play_note(index, color_change) {
     sound.play();
     if (color_change) {
         if (index < 7) {
-            tiles[index].style.backgroundColor = "#fcd4c0";
+            tiles[index].style.backgroundColor = "#f0d4ca";
         }
         else {
             tiles[index].style.backgroundColor = "#5a5858";
@@ -39,6 +39,5 @@ document.addEventListener("keyup", function (event) {
 tiles.forEach(function (tile, index) {
     tile.addEventListener("click", function () {
         play_note(index, false);
-        tile.style.backgroundColor = "white"
     });
 });
