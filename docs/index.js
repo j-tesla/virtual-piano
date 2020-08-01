@@ -1,18 +1,23 @@
-let notes = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
+let notes = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'W', 'E', 'T', 'Y', 'U'];
 tiles = document.querySelectorAll('kbd');
 
-function play_note(note, tile, color_change) {
-    let sound = new Audio('snd/' + note + '.mp3');
+function play_note(index, color_change) {
+    let sound = new Audio('snd/' + notes[index] + '.mp3');
     sound.play();
     if (color_change) {
-        tile.style.backgroundColor = "#fcd4c0";
+        if (index < 7) {
+            tiles[index].style.backgroundColor = "#fcd4c0";
+        }
+        else {
+            tiles[index].style.backgroundColor = "#5a5858";
+        }
     }
 }
 
 document.addEventListener("keydown", function (event){
     notes.forEach(function (item, index) {
         if (event.code === 'Key' + item){
-            play_note(item, tiles[index], true);
+            play_note(index, true);
         }
     });
 });
@@ -20,7 +25,12 @@ document.addEventListener("keydown", function (event){
 document.addEventListener("keyup", function (event) {
     notes.forEach(function (item, index) {
         if (event.code === 'Key' + item){
-            tiles[index].style.backgroundColor = "white"
+            if (index < 7) {
+                tiles[index].style.backgroundColor = "white"
+            }
+            else {
+                tiles[index].style.backgroundColor = "black"
+            }
         }
     });
 });
@@ -28,7 +38,7 @@ document.addEventListener("keyup", function (event) {
 
 tiles.forEach(function (tile, index) {
     tile.addEventListener("click", function () {
-        play_note(tile.innerText, tiles[index], false);
+        play_note(index, false);
         tile.style.backgroundColor = "white"
     });
 });

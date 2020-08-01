@@ -1,17 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+
 body {
-    background-color: chocolate ;
+    background-color: chocolate;
 }
+
 kbd {
-    background-color: white;
+    font-family: 'Lexend Zetta', sans-serif;
     text-align: center;
     display: inline-block;
-    border: 7px solid #2b2b2b;
+    border: 6px solid #2b2b2b;
+}
+
+.white-keys {
+    background-color: white;
     height: 40%;
     width: 110px;
     font-size: 25px;
     max-lines: 1;
-    margin: -4px;
+    margin: -5px;
     padding-top: 30%;
+}
+.black-keys {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    height: 30%;
+    padding-top: 15%;
+    width: 76px;
+    margin-right: 25px;
+}
+
+.left-container {
+    width: max-content;
+    height: 44%;
+    margin: 0;
+    position: absolute;
+    top: 52%;
+    left: 38.6%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.right-container {
+    width: max-content;
+    height: 40%;
+    margin: 0;
+    position: absolute;
+    top: 49.5%;
+    left: 59.8%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .container {
